@@ -3,7 +3,7 @@ require('dotenv').config()
 const { default: mongoose } = require('mongoose');
 var cors = require('cors')
 const app = express();
-const port = 8000; // Define your desired port
+const port = process.env.PORT || 8000; // Use platform-provided port in production
 
 
 // Middleware to parse JSON requests

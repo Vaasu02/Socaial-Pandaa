@@ -1,8 +1,8 @@
 const { default: axios } = require("axios");
 
-//created axio client to create endpoint
-const axiosClient=axios.create({
-    baseURL:'http://localhost:8000'
+// created axios client to call backend endpoints
+const axiosClient = axios.create({
+    baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
 });
 
 const createUser=(data)=>axiosClient.post('/user',data)
